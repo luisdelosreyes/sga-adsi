@@ -1,0 +1,68 @@
+<ul class="breadcrumb">
+  <li>Inicio</li>
+  <li>Usuarios</li>
+</ul>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Usuarios</legend>
+<div class="">
+<!-- Text input-->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Usuario</th>
+        <th>Estado</th>
+        <th>Seleccion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+          <td>Activo</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+          <td>Activo</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+          <td>Activo</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+    </div><!--well!-->
+    <legend>
+    </legend>
+<!-- Button -->
+<div class="row">
+    <div class="col-sm-5">
+    </div>
+<div class="col-sm-7">
+  <div class="col-md-2 pull-right">
+    <!-- <button id="btnDeletePerson" name="btnDeletePerson" class="btn btn-default">Eliminar</button> -->
+</div>
+  <div class="col-md-2 pull-right">
+    <a href="javascript:void(0)" id="btnEditPerson" name="btnEditPerson" class="btn btn-default" onclick="cargarContenido('pages/frmadduser.html')">Editar</a>
+  </div>
+  <div class="col-md-2 pull-right">
+    <a href="javascript:void(0)" id="btnAddPerson" name="btnAddPerson" class="btn btn-default" onclick="cargarContenido('pages/frmadduser.html')">Agregar</a>
+  </div>
+</div>
+</div>
+   
+</fieldset>
+</form>

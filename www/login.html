@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>.:Login - SGA:.</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Personalizado -->
+	<link href="assets/css/stylelogin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="login-page" hidden="hidden">
+	  <div class="form well">
+          <div>
+            <img id="logo" src="assets/img/logo_tranparente.png" />
+          </div>
+		<form class="login-form">
+            <input id="usuario" type="text" placeholder=""/>
+            <label for="usuario">Usuario</label>
+            <input id="password" type="password" placeholder=""/>
+        <label for="password">Contraseña</label>
+		  <button>Ingresar</button>
+<!--		  <p class="message">Not registered? <a href="#">Create an account</a></p>-->
+		</form>
+	  </div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript"><!-- pasar a un archivo externo -->
+          $(document).ready(function(){
+              //$(".login-page").hide();
+              $(".login-page").fadeIn("slow");
+          });
+        var inputs = $("input");
+          for (var i = 0; i < inputs.length; i++){
+		  //verifico si pierde foco, opcional verificar al cargar la pagina
+              $(inputs[i]).focusout(function(){
+                  if(this.value.length >= 1) {
+                      this.nextElementSibling.classList.add('fijarlabel');
+                  }else{
+                      this.nextElementSibling.classList.remove('fijarlabel');
+                  }
+              });
+			  //verifico si la tecla sube
+              inputs[i].addEventListener('keyup', function(){
+                  if(this.value.length >= 1) {
+                      this.nextElementSibling.classList.add('fijarlabel');
+                  }else{
+                      this.nextElementSibling.classList.remove('fijarlabel');
+                  }
+              })
+          }
+      </script>
+  </body>
+</html>

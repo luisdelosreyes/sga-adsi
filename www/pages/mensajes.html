@@ -1,0 +1,73 @@
+<ul class="breadcrumb">
+  <li>Inicio</li>
+  <li>Mensajes</li>
+</ul>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Mensajes</legend>
+<div class="">
+<!-- Text input-->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Asunto</th>
+        <th>Remitente</th>
+        <th>Estado</th>
+        <th>Seleccion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+          <td><input type="checkbox" class="select-item checkbox" name="select-item" value="1000" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+    </div><!--well!-->
+    <legend>
+    </legend>
+<!-- Button -->
+<div class="row">
+
+<div class="col-sm-8 col-sm-offset-4">
+  <div class="col-md-2 pull-right">
+    <a href="javascript:void(0)" id="btnDeleteMsg" name="btnDeleteMsg" class="btn btn-default">Eliminar</a>
+</div>
+  <div class="col-md-2 pull-right">
+    <a href="javascript:void(0)" id="btnSends" name="btnSends" class="btn btn-default" onclick = "cargarContenido('pages/frmsends.html')">Enviados</a>
+  </div>
+  <div class="col-md-2 pull-right">
+    <a href="javascript:void(0)" id="btnNewMsg" name="btnNewMsg" class="btn btn-default" onclick="cargarContenido('pages/frmnewmsg.html')">Nuevo</a>
+  </div>
+</div>
+</div>
+    <div class="lead">Para:</div>
+    <div class="lead">Asunto:</div>
+    
+    <div class="form-group">
+      <label for="comment">Mensaje:</label>      
+      <textarea class="form-control" rows="5" id="comment" disabled ></textarea>
+    </div>
+    <legend>
+    </legend>
+   
+</fieldset>
+</form>
